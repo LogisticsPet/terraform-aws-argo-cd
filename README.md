@@ -9,7 +9,7 @@ Terraform module to provision Argo CD on EKS Cluster
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.10.2 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | 5.42.0 |
 | <a name="requirement_helm"></a> [helm](#requirement\_helm) | 2.12.1 |
-| <a name="requirement_kubernetes"></a> [kubernetes](#requirement\_kubernetes) | 2.27.0 |
+| <a name="requirement_kubernetes"></a> [kubernetes](#requirement\_kubernetes) | 2.35.0 |
 | <a name="requirement_tls"></a> [tls](#requirement\_tls) | 4.0.6 |
 
 ## Providers
@@ -18,7 +18,7 @@ Terraform module to provision Argo CD on EKS Cluster
 |------|---------|
 | <a name="provider_aws"></a> [aws](#provider\_aws) | 5.42.0 |
 | <a name="provider_helm"></a> [helm](#provider\_helm) | 2.12.1 |
-| <a name="provider_kubernetes"></a> [kubernetes](#provider\_kubernetes) | 2.27.0 |
+| <a name="provider_kubernetes"></a> [kubernetes](#provider\_kubernetes) | 2.35.0 |
 | <a name="provider_tls"></a> [tls](#provider\_tls) | 4.0.6 |
 
 ## Modules
@@ -30,12 +30,12 @@ No modules.
 | Name | Type |
 |------|------|
 | [helm_release.argo_cd](https://registry.terraform.io/providers/hashicorp/helm/2.12.1/docs/resources/release) | resource |
-| [kubernetes_certificate_signing_request_v1.dex_server_cert_request](https://registry.terraform.io/providers/hashicorp/kubernetes/2.27.0/docs/resources/certificate_signing_request_v1) | resource |
-| [kubernetes_certificate_signing_request_v1.repo_server_cert_req](https://registry.terraform.io/providers/hashicorp/kubernetes/2.27.0/docs/resources/certificate_signing_request_v1) | resource |
-| [kubernetes_certificate_signing_request_v1.server_cert_request](https://registry.terraform.io/providers/hashicorp/kubernetes/2.27.0/docs/resources/certificate_signing_request_v1) | resource |
-| [kubernetes_secret.argo_server_cert](https://registry.terraform.io/providers/hashicorp/kubernetes/2.27.0/docs/resources/secret) | resource |
-| [kubernetes_secret.argocd-dex-server-tls](https://registry.terraform.io/providers/hashicorp/kubernetes/2.27.0/docs/resources/secret) | resource |
-| [kubernetes_secret.vault_server_cert](https://registry.terraform.io/providers/hashicorp/kubernetes/2.27.0/docs/resources/secret) | resource |
+| [kubernetes_certificate_signing_request_v1.dex_server_cert_request](https://registry.terraform.io/providers/hashicorp/kubernetes/2.35.0/docs/resources/certificate_signing_request_v1) | resource |
+| [kubernetes_certificate_signing_request_v1.repo_server_cert_req](https://registry.terraform.io/providers/hashicorp/kubernetes/2.35.0/docs/resources/certificate_signing_request_v1) | resource |
+| [kubernetes_certificate_signing_request_v1.server_cert_request](https://registry.terraform.io/providers/hashicorp/kubernetes/2.35.0/docs/resources/certificate_signing_request_v1) | resource |
+| [kubernetes_secret.argo_server_cert](https://registry.terraform.io/providers/hashicorp/kubernetes/2.35.0/docs/resources/secret) | resource |
+| [kubernetes_secret.argocd-dex-server-tls](https://registry.terraform.io/providers/hashicorp/kubernetes/2.35.0/docs/resources/secret) | resource |
+| [kubernetes_secret.vault_server_cert](https://registry.terraform.io/providers/hashicorp/kubernetes/2.35.0/docs/resources/secret) | resource |
 | [tls_cert_request.dex_server_cert_request](https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs/resources/cert_request) | resource |
 | [tls_cert_request.repo_server_request](https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs/resources/cert_request) | resource |
 | [tls_cert_request.server_cert_request](https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs/resources/cert_request) | resource |
