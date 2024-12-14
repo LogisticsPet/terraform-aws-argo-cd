@@ -14,6 +14,6 @@ variable "domain" {
 }
 
 variable "namespace" {
-  type = string
+  type        = string
   description = "Namespace to deploy"
 }

@@ -56,7 +56,7 @@ No modules.
 | <a name="input_certificate_issuer"></a> [certificate\_issuer](#input\_certificate\_issuer) | Cert manager issuer name for Ingress certificate | `string` | n/a | yes |
 | <a name="input_cluster_name"></a> [cluster\_name](#input\_cluster\_name) | Name of EKS cluster | `string` | n/a | yes |
 | <a name="input_domain"></a> [domain](#input\_domain) | Application domain name | `string` | n/a | yes |
-| <a name="input_namespace"></a> [namespace](#input\_namespace) | Namespace to deploy | `any` | n/a | yes |
+| <a name="input_namespace"></a> [namespace](#input\_namespace) | Namespace to deploy | `string` | n/a | yes |
 
 ## Outputs
 
