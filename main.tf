@@ -2,12 +2,17 @@ locals {
   ingress_host = "argo.${var.domain}"
 }
 
+resource "kubernetes_namespace" "argocd" {
+  metadata {
+    name = var.namespace
+  }
+}
 resource "helm_release" "argo_cd" {
   repository = "https://argoproj.github.io/argo-helm"
   chart      = "argo-cd"
   name       = "argo-cd"
-  version    = "6.11.1"
-  namespace  = var.namespace
+  version    = "7.7.10"
+  namespace  = kubernetes_namespace.argocd.metadata[0].name
   atomic     = true
   values = [
     yamlencode({
