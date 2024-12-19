@@ -11,9 +11,9 @@ resource "tls_cert_request" "dex_server_cert_request" {
   dns_names = [
     "localhost",
     "argocd-server",
-    "argocd-server.${var.namespace}",
-    "argocd-server.${var.namespace}.svc",
-    "argocd-server.${var.namespace}.svc.cluster.local"
+    "argocd-server.${kubernetes_namespace.argocd.metadata[0].name}",
+    "argocd-server.${kubernetes_namespace.argocd.metadata[0].name}.svc",
+    "argocd-server.${kubernetes_namespace.argocd.metadata[0].name}.svc.cluster.local"
   ]
   ip_addresses = [
     "127.0.0.1"
@@ -36,7 +36,7 @@ resource "kubernetes_certificate_signing_request_v1" "dex_server_cert_request" {
 resource "kubernetes_secret" "argocd-dex-server-tls" {
   metadata {
     name      = "argocd-dex-server-tls"
-    namespace = var.namespace
+    namespace = kubernetes_namespace.argocd.metadata[0].name
   }
   data = {
     "ca.crt"  = base64decode(data.aws_eks_cluster.this.certificate_authority[0].data)

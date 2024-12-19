@@ -10,7 +10,7 @@ Terraform module to provision Argo CD on EKS Cluster
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.10.2 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.10.3 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | 5.81.0 |
 | <a name="requirement_helm"></a> [helm](#requirement\_helm) | 2.16.1 |
 | <a name="requirement_kubernetes"></a> [kubernetes](#requirement\_kubernetes) | 2.35.0 |
@@ -37,6 +37,7 @@ No modules.
 | [kubernetes_certificate_signing_request_v1.dex_server_cert_request](https://registry.terraform.io/providers/hashicorp/kubernetes/2.35.0/docs/resources/certificate_signing_request_v1) | resource |
 | [kubernetes_certificate_signing_request_v1.repo_server_cert_req](https://registry.terraform.io/providers/hashicorp/kubernetes/2.35.0/docs/resources/certificate_signing_request_v1) | resource |
 | [kubernetes_certificate_signing_request_v1.server_cert_request](https://registry.terraform.io/providers/hashicorp/kubernetes/2.35.0/docs/resources/certificate_signing_request_v1) | resource |
+| [kubernetes_namespace.argocd](https://registry.terraform.io/providers/hashicorp/kubernetes/2.35.0/docs/resources/namespace) | resource |
 | [kubernetes_secret.argo_server_cert](https://registry.terraform.io/providers/hashicorp/kubernetes/2.35.0/docs/resources/secret) | resource |
 | [kubernetes_secret.argocd-dex-server-tls](https://registry.terraform.io/providers/hashicorp/kubernetes/2.35.0/docs/resources/secret) | resource |
 | [kubernetes_secret.vault_server_cert](https://registry.terraform.io/providers/hashicorp/kubernetes/2.35.0/docs/resources/secret) | resource |

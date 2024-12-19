@@ -11,9 +11,9 @@ resource "tls_cert_request" "repo_server_request" {
   dns_names = [
     "localhost",
     "argocd-server",
-    "argocd-server.${var.namespace}",
-    "argocd-server.${var.namespace}.svc",
-    "argocd-server.${var.namespace}.svc.cluster.local"
+    "argocd-server.${kubernetes_namespace.argocd.metadata[0].name}",
+    "argocd-server.${kubernetes_namespace.argocd.metadata[0].name}.svc",
+    "argocd-server.${kubernetes_namespace.argocd.metadata[0].name}.svc.cluster.local"
   ]
   ip_addresses = [
     "127.0.0.1"
@@ -22,7 +22,7 @@ resource "tls_cert_request" "repo_server_request" {
 
 resource "kubernetes_certificate_signing_request_v1" "repo_server_cert_req" {
   metadata {
-    name = "argocd-server-cert-request"
+    name = "argocd-repo-server-cert-request"
   }
   spec {
     usages      = ["digital signature", "key encipherment", "server auth"]
@@ -36,7 +36,7 @@ resource "kubernetes_certificate_signing_request_v1" "repo_server_cert_req" {
 resource "kubernetes_secret" "vault_server_cert" {
   metadata {
     name      = "argocd-repo-server-tls"
-    namespace = var.namespace
+    namespace = kubernetes_namespace.argocd.metadata[0].name
   }
   data = {
     "ca.crt"  = base64decode(data.aws_eks_cluster.this.certificate_authority[0].data)
