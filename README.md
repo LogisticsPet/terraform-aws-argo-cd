@@ -11,7 +11,7 @@ Terraform module to provision Argo CD on EKS Cluster
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.10.3 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 5.82.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 5.82.1 |
 | <a name="requirement_helm"></a> [helm](#requirement\_helm) | 2.16.1 |
 | <a name="requirement_kubernetes"></a> [kubernetes](#requirement\_kubernetes) | 2.35.0 |
 | <a name="requirement_tls"></a> [tls](#requirement\_tls) | 4.0.6 |
@@ -20,7 +20,7 @@ Terraform module to provision Argo CD on EKS Cluster
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.82.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.82.1 |
 | <a name="provider_helm"></a> [helm](#provider\_helm) | 2.16.1 |
 | <a name="provider_kubernetes"></a> [kubernetes](#provider\_kubernetes) | 2.35.0 |
 | <a name="provider_tls"></a> [tls](#provider\_tls) | 4.0.6 |
@@ -47,8 +47,8 @@ No modules.
 | [tls_private_key.dex_server_key](https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs/resources/private_key) | resource |
 | [tls_private_key.repo_server_key](https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs/resources/private_key) | resource |
 | [tls_private_key.server_key](https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs/resources/private_key) | resource |
-| [aws_eks_cluster.this](https://registry.terraform.io/providers/hashicorp/aws/5.82.0/docs/data-sources/eks_cluster) | data source |
-| [aws_eks_cluster_auth.this](https://registry.terraform.io/providers/hashicorp/aws/5.82.0/docs/data-sources/eks_cluster_auth) | data source |
+| [aws_eks_cluster.this](https://registry.terraform.io/providers/hashicorp/aws/5.82.1/docs/data-sources/eks_cluster) | data source |
+| [aws_eks_cluster_auth.this](https://registry.terraform.io/providers/hashicorp/aws/5.82.1/docs/data-sources/eks_cluster_auth) | data source |
 
 ## Inputs
 
