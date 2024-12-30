@@ -11,7 +11,7 @@ resource "helm_release" "argo_cd" {
   repository = "https://argoproj.github.io/argo-helm"
   chart      = "argo-cd"
   name       = "argo-cd"
-  version    = "7.7.10"
+  version    = "7.7.11"
   namespace  = kubernetes_namespace.argocd.metadata[0].name
   atomic     = true
   values = [
