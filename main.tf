@@ -44,7 +44,7 @@ resource "helm_release" "argo_cd" {
           minReplicas : 2
         }
         ingress = {
-          enabled = true
+          enabled  = true
           hostname = local.ingress_host
           paths = [
             "/"
