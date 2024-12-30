@@ -33,7 +33,7 @@ resource "kubernetes_certificate_signing_request_v1" "repo_server_cert_req" {
   auto_approve = true
 }
 
-resource "kubernetes_secret" "argo_repo_server_cert" {
+resource "kubernetes_secret" "repo_server_cert" {
   metadata {
     name      = "argocd-repo-server-tls"
     namespace = kubernetes_namespace.argocd.metadata[0].name
