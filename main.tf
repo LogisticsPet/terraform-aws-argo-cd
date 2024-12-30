@@ -7,6 +7,7 @@ resource "kubernetes_namespace" "argocd" {
     name = var.namespace
   }
 }
+
 resource "helm_release" "argo_cd" {
   repository = "https://argoproj.github.io/argo-helm"
   chart      = "argo-cd"
@@ -49,15 +50,7 @@ resource "helm_release" "argo_cd" {
           paths = [
             "/"
           ]
-          tls = false
-          extraTls = [
-            {
-              secretName = "argo-ingress-cert"
-              hosts = [
-                local.ingress_host
-              ]
-            }
-          ]
+          tls = true
           annotations = {
             "kubernetes.io/ingress.class"                                       = "nginx"
             "kubernetes.io/ingress.allow-http"                                  = "false"
