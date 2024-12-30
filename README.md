@@ -61,5 +61,7 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_namespace"></a> [namespace](#output\_namespace) | Namespace of ArgoCD Release |
 <!-- END_TF_DOCS -->
