@@ -49,7 +49,7 @@ resource "helm_release" "argo_cd" {
           paths = [
             "/"
           ]
-          tls = true
+          tls = false
           extraTls = [
             {
               secretName = "argo-ingress-cert"
