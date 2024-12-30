@@ -45,13 +45,12 @@ resource "helm_release" "argo_cd" {
         }
         ingress = {
           enabled = true
-          hosts = [
-            local.ingress_host
-          ]
+          hostname = local.ingress_host
           paths = [
             "/"
           ]
-          tls = [
+          tls = true
+          extraTls = [
             {
               secretName = "argo-ingress-cert"
               hosts = [
