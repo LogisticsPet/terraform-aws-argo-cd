@@ -1,5 +1,5 @@
 locals {
-  ingress_host = "argo.${var.domain}"
+  ingress_host = "argo.${var.domain}."
 }
 
 resource "kubernetes_namespace" "argocd" {
