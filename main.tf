@@ -59,7 +59,7 @@ resource "helm_release" "argo_cd" {
             "nginx.ingress.kubernetes.io/auth-tls-verify-client"                = "off"
             "nginx.ingress.kubernetes.io/auth-tls-pass-certificate-to-upstream" = "false"
             "cert-manager.io/cluster-issuer"                                    = var.certificate_issuer
-            "external-dns.alpha.kubernetes.io/hostname"                         = "${local.ingress_host}."
+            "external-dns.alpha.kubernetes.io/hostname"                         = local.ingress_host
           }
         }
       }
