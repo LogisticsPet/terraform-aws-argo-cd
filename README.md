@@ -10,7 +10,7 @@ Terraform module to provision Argo CD on EKS Cluster
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.10.3 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.10.4 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | 5.82.2 |
 | <a name="requirement_helm"></a> [helm](#requirement\_helm) | 2.17.0 |
 | <a name="requirement_kubernetes"></a> [kubernetes](#requirement\_kubernetes) | 2.35.1 |
